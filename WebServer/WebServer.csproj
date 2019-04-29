@@ -11,7 +11,6 @@
     <Folder Include="Server\HTTP\Response\" />
     <Folder Include="Server\Routing\Contracts\" />
     <Folder Include="Server\Contracts\" />
-    <Folder Include="Server\Exceptions\" />
     <Folder Include="Server\Headers\Contracts\" />
   </ItemGroup>
 
