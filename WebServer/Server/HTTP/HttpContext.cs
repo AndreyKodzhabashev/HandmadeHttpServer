@@ -2,9 +2,9 @@
 {
     using Contracts;
 
-    public class HttpContest : IHttpContext
+    public class HttpContext : IHttpContext
     {
-        public HttpContest(string requestStr)
+        public HttpContext(string requestStr)
         {
             this.Request = new HttpRequest(requestStr);
         }
