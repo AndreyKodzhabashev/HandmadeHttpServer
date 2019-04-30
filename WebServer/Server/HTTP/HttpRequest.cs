@@ -96,7 +96,7 @@ namespace WebServer.Server.HTTP
 
             if (HeaderCollection.ContainsKey("Host") == false)
             {
-                ?throw new BadRequestException("Host header must persist.");
+                throw new BadRequestException("Host header must persist.");
             }
         }
 
