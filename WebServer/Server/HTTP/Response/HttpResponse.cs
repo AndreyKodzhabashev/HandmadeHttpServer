@@ -2,7 +2,11 @@
 {
     using Contracts;
 
-    public class HttpResponse : IHttpResponse
+    public abstract class HttpResponse : IHttpResponse
     {
+        protected HttpResponse(string redirectUrl)
+        {
+
+        }
     }
 }

@@ -4,11 +4,13 @@
 
     public class HttpContext : IHttpContext
     {
+        private readonly IHttpRequest request;
+
         public HttpContext(string requestStr)
         {
-            this.Request = new HttpRequest(requestStr);
+            this.request = new HttpRequest(requestStr);
         }
 
-        public HttpRequest Request { get; }
+        public IHttpRequest Request => this.request;
     }
 }

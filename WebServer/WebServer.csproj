@@ -9,7 +9,6 @@
     <Folder Include="Application\Controllers\" />
     <Folder Include="Application\Views\" />
     <Folder Include="Server\Routing\Contracts\" />
-    <Folder Include="Server\Contracts\" />
     <Folder Include="Server\Headers\Contracts\" />
   </ItemGroup>
 

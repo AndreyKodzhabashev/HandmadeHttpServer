@@ -15,14 +15,7 @@
 
         public void Add(HttpHeader header)
         {
-            if (headers.ContainsKey(header.Key) == false)
-            {
-                headers[header.Key] = header;
-            }
-            else
-            {
-                throw new ArgumentException($"Key {header.Key} already exists");
-            }
+            headers[header.Key] = header;
         }
 
         public bool ContainsKey(string key)
@@ -40,9 +33,7 @@
             return null;
         }
 
-        public override string ToString()
-        {
-            return string.Join(Environment.NewLine, this.headers);
-        }
+        public override string ToString() => string.Join(Environment.NewLine, this.headers);
+        
     }
 }
