@@ -1,16 +1,21 @@
-﻿namespace WebServer.Server.HTTP
+﻿using WebServer.Server.Common;
+
+namespace WebServer.Server.HTTP
 {
     public class HttpHeader
     {
         public HttpHeader(string key, string value)
         {
+            CoreValidator.ThrowIfNullOrEmpty(key,nameof(key));
+            CoreValidator.ThrowIfNullOrEmpty(value,nameof(value));
+
             this.Key = key;
             this.Value = value;
         }
 
-        public string Key { get; set; }
+        public string Key { get; private set; }
 
-        public string Value { get; set; }
+        public string Value { get; private  set; }
 
         public override string ToString()
         {

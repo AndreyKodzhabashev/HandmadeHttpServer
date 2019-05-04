@@ -1,4 +1,6 @@
-﻿namespace WebServer.Server.HTTP
+﻿using WebServer.Server.Common;
+
+namespace WebServer.Server.HTTP
 {
     using Contracts;
 
@@ -6,9 +8,11 @@
     {
         private readonly IHttpRequest request;
 
-        public HttpContext(string requestStr)
+        public HttpContext(IHttpRequest requestStr)
         {
-            this.request = new HttpRequest(requestStr);
+            CoreValidator.ThrowIfNull(requestStr, nameof(requestStr));
+
+            this.request = requestStr;
         }
 
         public IHttpRequest Request => this.request;

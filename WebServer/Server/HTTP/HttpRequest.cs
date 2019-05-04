@@ -1,5 +1,6 @@
 ﻿namespace WebServer.Server.HTTP
 {
+    using Common;
     using Contracts;
     using Enums;
     using Exceptions;
@@ -12,6 +13,8 @@
     {
         public HttpRequest(string requestText)
         {
+            CoreValidator.ThrowIfNull(requestText, nameof(requestText));
+
             this.FormData = new Dictionary<string, string>();
             this.HeaderCollection = new HttpHeaderCollection();
             this.QueryParameters = new Dictionary<string, string>();
